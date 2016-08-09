@@ -20,15 +20,15 @@ const Portfolio = React.createClass({
   render: function() {
     return(
       <div className='container fluid text-center'>
+        <ModalView id={modalId} />
         <h1>Howdie, world!</h1>
         <div className='row centered'>
           <ItemView onClick={this.showModal} colSpan={colSpan} colOffset={colOffset}/>
           <ItemView colSpan={colSpan} />
-          <div className='row centered'>
-            <ItemView colSpan={colSpan} colOffset={colOffset}/>
-            <ItemView colSpan={colSpan} />
-          </div>
-          <ModalView id={modalId} />
+        </div>
+        <div className='row centered'>
+          <ItemView colSpan={colSpan} colOffset={colOffset}/>
+          <ItemView colSpan={colSpan} />
         </div>
       </div>
     );

@@ -34165,6 +34165,7 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'container fluid text-center' },
+	      React.createElement(ModalView, { id: modalId }),
 	      React.createElement(
 	        'h1',
 	        null,
@@ -34174,14 +34175,13 @@
 	        'div',
 	        { className: 'row centered' },
 	        React.createElement(ItemView, { onClick: this.showModal, colSpan: colSpan, colOffset: colOffset }),
-	        React.createElement(ItemView, { colSpan: colSpan }),
-	        React.createElement(
-	          'div',
-	          { className: 'row centered' },
-	          React.createElement(ItemView, { colSpan: colSpan, colOffset: colOffset }),
-	          React.createElement(ItemView, { colSpan: colSpan })
-	        ),
-	        React.createElement(ModalView, { id: modalId })
+	        React.createElement(ItemView, { colSpan: colSpan })
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'row centered' },
+	        React.createElement(ItemView, { colSpan: colSpan, colOffset: colOffset }),
+	        React.createElement(ItemView, { colSpan: colSpan })
 	      )
 	    );
 	  }
