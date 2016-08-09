@@ -1,6 +1,7 @@
 'use strict'
 
 // Used for generating HTML file
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/src/index.html',
@@ -13,13 +14,14 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [
-    './src/js/index.jsx'
+    './src/js/index.jsx',
   ],
   devtool: 'source-map',
   module: {
     loaders: [
+
       {
-        test: /\.jsx?$/,
+        test: /\.js[x]?$/,
         include: __dirname + '/src',
         exclude: '/node_modules',
         loader: 'babel-loader',
@@ -50,6 +52,10 @@ module.exports = {
     path: __dirname + '/public'
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    }),
     HTMLWebpackPluginConfig,
     new ExtractTextPlugin('stylesheets/styles.css')
     ]
