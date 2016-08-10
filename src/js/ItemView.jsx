@@ -12,7 +12,7 @@ const ItemView = React.createClass({
     return(
       <div className={className} >
         <div className="thumbnail">
-          <img onClick={this.props.onClick} src="images/test_im.jpg"/>
+          <img onClick={this.props.onClick} src="assets/img/test_im.jpg"/>
           <div className="caption">
           <h3>Thumbnail label</h3>
           <p>...</p>

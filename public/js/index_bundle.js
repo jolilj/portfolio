@@ -34157,7 +34157,6 @@
 	
 	
 	  showModal: function showModal() {
-	    console.log($('#' + modalId));
 	    $('#' + modalId).modal();
 	  },
 	
@@ -34213,7 +34212,7 @@
 	      React.createElement(
 	        'div',
 	        { className: 'thumbnail' },
-	        React.createElement('img', { onClick: this.props.onClick, src: 'images/test_im.jpg' }),
+	        React.createElement('img', { onClick: this.props.onClick, src: 'assets/img/test_im.jpg' }),
 	        React.createElement(
 	          'div',
 	          { className: 'caption' },
@@ -34255,7 +34254,7 @@
 	      { id: this.props.id, className: 'modal fade' },
 	      React.createElement(
 	        'div',
-	        { className: 'modal-dialog' },
+	        { className: 'modal-dialog  modal-lg' },
 	        React.createElement(
 	          'div',
 	          { className: 'modal-content' },

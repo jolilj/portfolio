@@ -13,7 +13,6 @@ let colNum = 2,
 const Portfolio = React.createClass({
 
   showModal: function() {
-    console.log($('#' + modalId));
     $('#' + modalId).modal();
   },
 
