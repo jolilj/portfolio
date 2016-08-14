@@ -9,9 +9,11 @@ const React = require('react'),
       Portfolio = require('./Portfolio.jsx');
 
 ReactDOM.render(
-    <div className="jumbotron">
+    <div>
       <NavBar />
-      <Portfolio />
+      <div className="container-fluid portfolio-wrapper">
+        <Portfolio />
+      </div>
     </div>,
     document.getElementById('main')
 );

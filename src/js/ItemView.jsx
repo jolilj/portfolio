@@ -1,6 +1,8 @@
 'use strict'
 const React = require('react');
 
+const im = require('../img/tilt_est_im.png');
+
 /** ItemView
  *  Component holding portfolio items
  */
@@ -12,7 +14,7 @@ const ItemView = React.createClass({
     return(
       <div className={className} >
         <div className="thumbnail">
-          <img onClick={this.props.onClick} src="assets/img/test_im.jpg"/>
+          <img onClick={this.props.onClick} src={im}/>
           <div className="caption">
           <h3>Thumbnail label</h3>
           <p>...</p>
