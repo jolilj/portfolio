@@ -7,12 +7,13 @@ const React = require('react');
 const NavBar = React.createClass({
   render: function() {
     return(
-      <div className="container fluid text-center">
-        <ul className="nav nav-pills">
-          <li role="presentation" className="active"><a href="#">Home</a></li>
-          <li role="presentation"><a href="#">Profile</a></li>
-          <li role="presentation"><a href="#">Messages</a></li>
-        </ul>
+      <div className="nav-bar">
+        <div>
+          <a className="btn btn-primary" href="#portfolio" role="button"><i className="fa fa-folder-open" aria-hidden="true"></i> &nbsp;PORTFOLIO</a>
+        </div>
+        <div>
+          <a className="btn btn-primary" href="#about" role="button"><i className="fa fa-user" aria-hidden="true"></i> &nbsp;ABOUT</a>
+        </div>
       </div>
     );
   },

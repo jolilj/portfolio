@@ -6,14 +6,14 @@ require('bootstrap');
 const React = require('react'),
       ReactDOM = require('react-dom'),
       NavBar = require('./NavBar.jsx'),
-      Portfolio = require('./Portfolio.jsx');
+      Portfolio = require('./Portfolio.jsx'),
+      About = require('./About.jsx');
 
 ReactDOM.render(
     <div>
       <NavBar />
-      <div className="container-fluid portfolio-wrapper">
-        <Portfolio />
-      </div>
+      <Portfolio />
+      <About />
     </div>,
     document.getElementById('main')
 );

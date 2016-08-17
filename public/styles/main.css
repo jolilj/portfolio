@@ -254,8 +254,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url(/assets/fonts/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1);
-  src: url(/assets/fonts/glyphicons-halflings-regular.eot?f4769f9bdb7466be65088239c12046d1?#iefix) format('embedded-opentype'), url(/assets/fonts/glyphicons-halflings-regular.woff2?448c34a56d699c29117adc64c43affeb) format('woff2'), url(/assets/fonts/glyphicons-halflings-regular.woff?fa2772327f55d8198301fdb8bcfc8158) format('woff'), url(/assets/fonts/glyphicons-halflings-regular.ttf?e18bbf611f2a2e43afc071aa2f4e1512) format('truetype'), url(./assets/img/glyphicons-halflings-regular.svg?89889688147bd7575d6327160d64e760#glyphicons_halflingsregular) format('svg');
+  src: url(.././assets/fonts/glyphicons-halflings-regular.eot);
+  src: url(.././assets/fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), url(.././assets/fonts/glyphicons-halflings-regular.woff2) format('woff2'), url(.././assets/fonts/glyphicons-halflings-regular.woff) format('woff'), url(.././assets/fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(.././assets/img/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg');
 }
 .glyphicon {
   position: relative;
@@ -3101,26 +3101,26 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
 }
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
-  background-color: #286090;
-  border-color: #122b40;
+  background-color: rgba(230, 230, 230, 0);
+  border-color: rgba(191, 191, 191, 0);
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: rgba(230, 230, 230, 0);
+  border-color: rgba(224, 224, 224, 0);
 }
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: rgba(230, 230, 230, 0);
+  border-color: rgba(224, 224, 224, 0);
 }
 .btn-primary:active:hover,
 .btn-primary.active:hover,
@@ -3132,8 +3132,8 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary.active.focus,
 .open > .dropdown-toggle.btn-primary.focus {
   color: #fff;
-  background-color: #204d74;
-  border-color: #122b40;
+  background-color: rgba(212, 212, 212, 0);
+  border-color: rgba(191, 191, 191, 0);
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -3149,11 +3149,11 @@ fieldset[disabled] .btn-primary:focus,
 .btn-primary.disabled.focus,
 .btn-primary[disabled].focus,
 fieldset[disabled] .btn-primary.focus {
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
 }
 .btn-primary .badge {
-  color: #337ab7;
+  color: rgba(255, 255, 255, 0);
   background-color: #fff;
 }
 .btn-success {
@@ -4941,7 +4941,7 @@ a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #b8d8d3;
+  background-color: #eeeeee;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -4953,7 +4953,7 @@ a.badge:focus {
   font-weight: 200;
 }
 .jumbotron > hr {
-  border-top-color: #97c6bf;
+  border-top-color: #d5d5d5;
 }
 .container .jumbotron,
 .container-fluid .jumbotron {
@@ -6731,8 +6731,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url(/assets/fonts/fontawesome-webfont.eot?25a32416abee198dd821b0b17a198a8f);
-  src: url(/assets/fonts/fontawesome-webfont.eot?25a32416abee198dd821b0b17a198a8f?#iefix&v=4.6.3) format('embedded-opentype'), url(/assets/fonts/fontawesome-webfont.woff2?e6cf7c6ec7c2d6f670ae9d762604cb0b) format('woff2'), url(/assets/fonts/fontawesome-webfont.woff?c8ddf1e5e5bf3682bc7bebf30f394148) format('woff'), url(/assets/fonts/fontawesome-webfont.ttf?1dc35d25e61d819a9c357074014867ab) format('truetype'), url(./assets/img/fontawesome-webfont.svg?d7c639084f684d66a1bc66855d193ed8#fontawesomeregular) format('svg');
+  src: url(.././assets/fonts/fontawesome-webfont.eot);
+  src: url(.././assets/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3) format('embedded-opentype'), url(.././assets/fonts/fontawesome-webfont.woff2) format('woff2'), url(.././assets/fonts/fontawesome-webfont.woff) format('woff'), url(.././assets/fonts/fontawesome-webfont.ttf) format('truetype'), url(.././assets/img/fontawesome-webfont.svg#fontawesomeregular) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -8931,8 +8931,56 @@ button.close {
   overflow: visible;
   clip: auto;
 }
-.portfolio-wrapper {
-  background-color: #b8d8d3;
+.content-wrapper {
+  padding: 20px;
+}
+.content-wrapper.portfolio {
+  background-color: rgba(212, 232, 228, 0.8);
+}
+.content-wrapper.about {
+  background: url(.././assets/img/about_bg.svg);
+}
+.nav-bar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+.floating-view,
+.portfolio-view,
+.about-view {
+  width: 300px;
+  margin-bottom: 50px;
+  display: inline-block;
+  box-shadow: 3px 3px 10px rgba(102, 102, 102, 0.1);
+}
+.portfolio-view {
+  background-color: #fff;
+}
+.portfolio-view-title {
+  text-align: center;
+  left: 20px;
+  right: 20px;
+  padding: 20px;
+  font-weight: 300;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.about-text {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
+.about-image {
+  border-radius: 50%;
+}
+.about-view {
+  width: 600px;
+  background-color: rgba(212, 232, 228, 0.8);
+}
+.btn-primary {
+  color: rgba(255, 255, 255, 0.8);
+}
+.btn-primary:hover {
+  color: rgba(255, 255, 255, 0.9);
 }
 
-/*# sourceMappingURL=styles.css.map*/
+/*# sourceMappingURL=main.css.map*/

@@ -4,7 +4,69 @@
 //Custom
 @import "custom_variables";
 
+.content-wrapper {
+  padding: @wrapper-padding;
 
-.portfolio-wrapper {
-  background-color: #b8d8d3;
+  &.portfolio {
+    background-color: @wrapper-bgcolor-light-blue;
+    //background: url('../img/portfolio_bg.svg');
+  }
+
+  &.about {
+    //background-color: @wrapper-bgcolor-second;
+    background: url('../img/about_bg.svg');
+  }
+
+}
+
+.nav-bar {
+  position: fixed;
+  top: @wrapper-padding;
+  left: @wrapper-padding;
+}
+
+.floating-view {
+  width: @floating-view-width;
+  margin-bottom: @floating-view-margin;
+  display: inline-block;
+  box-shadow: 3px 3px 10px @floating-view-shadow-color;
+}
+
+.portfolio-view {
+  &:extend(.floating-view);
+  background-color: @portfolio-view-bg-color;
+
+  &-title {
+    text-align: center;
+    left:@portfolio-title-padding;
+    right: @portfolio-title-padding;
+    padding: @portfolio-title-padding;
+    font-weight: @default-font-weight;
+    font-size: @portfolio-title-size;
+    color: @text-color-dark; 
+  }
+}
+
+.about {
+  &-text {
+    font-weight: @default-font-weight;
+    color: @text-color-light;
+  }
+
+  &-image {
+    border-radius: 50%;
+  }
+
+  &-view {
+    &:extend(.floating-view);
+    width: @floating-view-width*2;
+    background-color: @about-view-bg-color;
+  }
+}
+
+.btn-primary {
+  color: @text-color-light;
+  &:hover {
+    color: @text-color-lighter;
+  }
 }

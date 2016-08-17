@@ -32,7 +32,7 @@ module.exports = {
 
       {
         test: /\.less$/,
-        loader: ExtractTextPlugin.extract('style', 'css!less'),
+        loader: ExtractTextPlugin.extract('style', 'css!less', {publicPath: '../'}),
         include: __dirname + '/src/less',
       },
       {
@@ -68,6 +68,6 @@ module.exports = {
       jQuery: "jquery"
     }),
     HTMLWebpackPluginConfig,
-    new ExtractTextPlugin('stylesheets/styles.css')
+    new ExtractTextPlugin('styles/main.css')
     ]
 };

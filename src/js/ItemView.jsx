@@ -1,23 +1,30 @@
 'use strict'
 const React = require('react');
 
-const im = require('../img/tilt_est_im.png');
+/** Portfolio items */
+const items = require('./PortfolioItems');
 
 /** ItemView
  *  Component holding portfolio items
  */
 const ItemView = React.createClass({
   render: function() {
-    let colSpan = (this.props.colSpan ? this.props.colSpan : 4),
-        colOffset = (this.props.colOffset ? this.props.colOffset : 0),
+    // Determine bootstrap grid class
+    let colSpan = this.props.colSpan ? this.props.colSpan : 4,
+        colOffset = this.props.colOffset ? this.props.colOffset : 0,
         className='col-md-' + colSpan + ' col-md-offset-' + colOffset;
+
+    // Get item content
+    let itemIm = items[this.props.type].im,
+        title = items[this.props.type].title,
+        titleClass = items[this.props.type].titleClass;
+
     return(
       <div className={className} >
-        <div className="thumbnail">
-          <img onClick={this.props.onClick} src={im}/>
-          <div className="caption">
-          <h3>Thumbnail label</h3>
-          <p>...</p>
+        <div className={"portfolio-view"} >
+          <img onClick={this.props.onClick} src={itemIm}/>
+          <div className={"portfolio-view-title " + titleClass}>
+            <p>{title}</p>
           </div>
         </div>
       </div>
