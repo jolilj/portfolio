@@ -4,11 +4,13 @@
   "description": "joakim lilja portfolio site",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "webpack-dev-server --content-base public/",
+    "start": "webpack -p"
   },
   "author": "joakim lilja",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^6.4.0",
     "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.13.1",
     "babel-loader": "^6.2.4",
@@ -28,6 +30,7 @@
     "script-loader": "^0.7.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   }
 }

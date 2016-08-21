@@ -4,6 +4,20 @@
 //Custom
 @import "custom_variables";
 
+p {
+  font-weight: @font-weight-default;
+}
+a {
+  color: @text-color-light;
+  font-weight: @font-weight-default;
+
+  &:hover {
+    text-decoration: none;
+    color: @text-color-lighter;
+  }
+
+}
+
 .content-wrapper {
   padding: @wrapper-padding;
 
@@ -13,8 +27,8 @@
   }
 
   &.about {
-    //background-color: @wrapper-bgcolor-second;
-    background: url('../img/about_bg.svg');
+    background-color: @wrapper-bgcolor-pink;
+    //background: url('../img/about_bg.svg');
   }
 
 }
@@ -27,6 +41,7 @@
 
 .floating-view {
   width: @floating-view-width;
+  height: @floating-view-height;
   margin-bottom: @floating-view-margin;
   display: inline-block;
   box-shadow: 3px 3px 10px @floating-view-shadow-color;
@@ -34,35 +49,132 @@
 
 .portfolio-view {
   &:extend(.floating-view);
+  position: relative;
   background-color: @portfolio-view-bg-color;
 
   &-title {
     text-align: center;
-    left:@portfolio-title-padding;
-    right: @portfolio-title-padding;
-    padding: @portfolio-title-padding;
-    font-weight: @default-font-weight;
+    width: @floating-view-width;
+    height: @portfolio-title-height;
+    font-weight: @font-weight-default;
     font-size: @portfolio-title-size;
     color: @text-color-dark; 
+    display:table-cell;
+    vertical-align:middle;
+  }
+
+  &-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &-image-overlay {
+    opacity: 0;
+    position: absolute;
+    padding-top: @floating-view-height/2 - 30;
+    width: @floating-view-width;
+    height: @floating-view-height; 
+    left: 0;
+    top: 0;
+    color: @text-color-darkest;
+    font-size: 60px;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+      background-color: @text-color-light;
+    }
   }
 }
 
 .about {
+  color: @text-color-lighter;
+  p {
+    font-weight: @font-weight-default;
+  }
+
   &-text {
-    font-weight: @default-font-weight;
-    color: @text-color-light;
+    text-align: justify;
+    width: @about-view-width;
+    column-count: 2;
+    clear: both;
+  }
+
+  &-footer {
+    &:extend(.about-text);
+    padding-top: @wrapper-padding;
+    text-align: center;
+    column-count: 1;
   }
 
   &-image {
     border-radius: 50%;
   }
 
+  &-title {
+    font-weight: @font-weight-default;
+    font-size: @font-size-very-large;
+    color: @text-color-lighter;
+  }
+
   &-view {
-    &:extend(.floating-view);
-    width: @floating-view-width*2;
-    background-color: @about-view-bg-color;
+    display: inline-block;
+    text-align: left;
+    width: @about-view-width;
   }
 }
+
+.modal {
+  color: @text-color-darkest;
+  &-content {
+    padding: @wrapper-padding;
+    background-color: #fff;
+  }
+  &-text {
+    background-color: #fff;
+    text-align: justify;
+    column-count: 2;
+  }
+  &-footer {
+    padding-top: @wrapper-padding;
+    text-align: center;
+  }
+  &-big-image {
+    padding: @wrapper-padding;
+  }
+  
+  &-item {
+    overflow: auto;
+    padding-bottom: @wrapper-padding;
+    &-image {
+      float: left;
+      margin-right: @wrapper-padding;
+      width:@modal-item-image-width;
+    }
+
+    &-section {
+      text-align: left;
+
+      h3 {
+        font-weight: @font-weight-default;
+        font-size: @portfolio-title-size;
+        color: @text-color-dark;
+      }
+    }
+  }
+
+  h1 {
+    font-size: @font-size-large;
+  }
+  a {
+    color: @text-color-dark;
+    &:hover {
+      color: @text-color-darkest;
+    }
+  }
+
+};
 
 .btn-primary {
   color: @text-color-light;

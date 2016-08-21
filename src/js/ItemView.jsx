@@ -2,12 +2,16 @@
 const React = require('react');
 
 /** Portfolio items */
-const items = require('./PortfolioItems');
+const items = require('./PortfolioItems.jsx');
 
 /** ItemView
  *  Component holding portfolio items
  */
 const ItemView = React.createClass({
+  onItemClick: function() {
+    this.props.onClick(this.props.type);
+  },
+
   render: function() {
     // Determine bootstrap grid class
     let colSpan = this.props.colSpan ? this.props.colSpan : 4,
@@ -22,7 +26,12 @@ const ItemView = React.createClass({
     return(
       <div className={className} >
         <div className={"portfolio-view"} >
-          <img onClick={this.props.onClick} src={itemIm}/>
+          <div className={"portfolio-view-image-wrapper"} >
+            <img src={itemIm}/>
+            <div className={"portfolio-view-image-overlay"} onClick={this.onItemClick}>
+              <span className="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"/>
+            </div>
+          </div>
           <div className={"portfolio-view-title " + titleClass}>
             <p>{title}</p>
           </div>

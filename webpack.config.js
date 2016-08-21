@@ -16,7 +16,6 @@ module.exports = {
   entry: [
     './src/js/index.jsx',
   ],
-  devtool: 'source-map',
   module: {
     loaders: [
 
@@ -32,7 +31,7 @@ module.exports = {
 
       {
         test: /\.less$/,
-        loader: ExtractTextPlugin.extract('style', 'css!less', {publicPath: '../'}),
+        loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 2 version!less', {publicPath: '../'}),
         include: __dirname + '/src/less',
       },
       {
@@ -45,6 +44,10 @@ module.exports = {
       },
       {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file?name=./assets/fonts/[name].[ext]'
+      },
+      {
+        test: /\.otf?$/,
         loader: 'file?name=./assets/fonts/[name].[ext]'
       },
       {
@@ -67,7 +70,12 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery"
     }),
+    new webpack.DefinePlugin({
+      'process.env':{
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
     HTMLWebpackPluginConfig,
     new ExtractTextPlugin('styles/main.css')
-    ]
+  ],
 };
