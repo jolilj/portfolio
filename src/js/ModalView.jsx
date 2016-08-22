@@ -13,7 +13,6 @@ const ModalView = React.createClass({
         text = type ? items[this.props.type].text : "",
         footer = type ? items[this.props.type].footer : "";
 
-    console.log(type);
     if(!footer) footer = (<div className="modal-footer"></div>);
 
     return(
