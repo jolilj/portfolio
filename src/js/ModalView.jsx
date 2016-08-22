@@ -19,6 +19,7 @@ const ModalView = React.createClass({
       <div id={this.props.id} className="modal fade">
         <div className="modal-dialog  modal-lg">
           <div className="modal-content">
+          <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <div>
               <h1>{title}</h1>
             </div>

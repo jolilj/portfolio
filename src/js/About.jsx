@@ -13,9 +13,13 @@ const About = React.createClass({
           <img className='about-image' src={aboutIm}/>
         </div>
         <h1 className="about-title">{AboutContent.title}</h1>
-        <div className="about-view">
-            {AboutContent.text}
-            {AboutContent.footer}
+        <div className="row-centered">
+          <div className="col-md-6 col-md-offset-3">
+            <div className="about-view">
+                {AboutContent.text}
+                {AboutContent.footer}
+            </div>
+          </div>
         </div>
       </div>
         );

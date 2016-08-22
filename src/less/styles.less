@@ -37,6 +37,16 @@ a {
   position: fixed;
   top: @wrapper-padding;
   left: @wrapper-padding;
+
+  &-mobile {
+    text-align: center;
+    background-color: @wrapper-bgcolor-light-blue;
+    position: relative;
+    padding: @wrapper-padding;
+  }
+  &-item-mobile {
+    display: inline-block;
+  }
 }
 
 .floating-view {
@@ -96,7 +106,7 @@ a {
 
   &-text {
     text-align: justify;
-    width: @about-view-width;
+    width: 100%;
     column-count: 2;
     clear: both;
   }
@@ -121,47 +131,25 @@ a {
   &-view {
     display: inline-block;
     text-align: left;
-    width: @about-view-width;
   }
 }
 
 .modal {
   color: @text-color-darkest;
+
   &-content {
     padding: @wrapper-padding;
     background-color: #fff;
   }
+
   &-text {
     background-color: #fff;
     text-align: justify;
     column-count: 2;
   }
+
   &-footer {
-    padding-top: @wrapper-padding;
     text-align: center;
-  }
-  &-big-image {
-    padding: @wrapper-padding;
-  }
-  
-  &-item {
-    overflow: auto;
-    padding-bottom: @wrapper-padding;
-    &-image {
-      float: left;
-      margin-right: @wrapper-padding;
-      width:@modal-item-image-width;
-    }
-
-    &-section {
-      text-align: left;
-
-      h3 {
-        font-weight: @font-weight-default;
-        font-size: @portfolio-title-size;
-        color: @text-color-dark;
-      }
-    }
   }
 
   h1 {
@@ -176,9 +164,21 @@ a {
 
 };
 
+// Overwriting bootstrap classes
 .btn-primary {
-  color: @text-color-light;
+  font-size:@font-size-medium;
+  color: @text-color-darker;
   &:hover {
-    color: @text-color-lighter;
+    color: @text-color-dark;
   }
+  &:active {
+    color: @text-color-dark;
+  }
+  &:active:hover {
+    color: @text-color-dark;
+  }
+}
+
+.thumbnail {
+  border: none;
 }
