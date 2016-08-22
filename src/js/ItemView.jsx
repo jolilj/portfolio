@@ -22,14 +22,17 @@ const ItemView = React.createClass({
     // Get item content
     let itemIm = items[this.props.type].im,
         title = items[this.props.type].title,
-        titleClass = "portfolio-view-title" + (this.props.isMobile ? " mobile" : "");
+        viewClass = "portfolio-view" + (this.props.isMobile ? " mobile" : ""),
+        titleClass = "portfolio-view-title" + (this.props.isMobile ? " mobile" : ""),
+        overlayClass = "portfolio-view-image-overlay" + (this.props.isMobile ? " mobile" : "");
+        
 
     return(
       <div className={className} >
-        <div className={"portfolio-view"} >
-          <div className={"portfolio-view-image-wrapper"} >
+        <div className={viewClass} >
+          <div>
             <img src={itemIm}/>
-            <div className={"portfolio-view-image-overlay"} onClick={this.onItemClick}>
+            <div className={overlayClass} onClick={this.onItemClick} data-toggle="modal">
               <span className="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"/>
             </div>
           </div>

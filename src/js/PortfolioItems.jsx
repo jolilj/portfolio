@@ -26,7 +26,7 @@ module.exports = {
     footer: (
       <div className="modal-footer">
         <a href="https://github.com/jolilj/SimpleMadgwickFilter/raw/master/project_report.pdf"
-         target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;
+         target="_blank">&nbsp;&nbsp;;
         <i className="fa fa-file-pdf-o" aria-hidden="true"></i> &nbsp;Download report</a>
         <a href="https://github.com/jolilj/SimpleMadgwickFilter" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;
         <i className="fa fa-github-square fa-lg" aria-hidden="true"/> &nbsp;View project on Github</a>

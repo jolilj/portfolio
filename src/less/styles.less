@@ -73,6 +73,10 @@ a {
   position: relative;
   background-color: @portfolio-view-bg-color;
 
+  &.mobile {
+    height: @floating-view-height-mobile;
+  }
+
   &-title {
     text-align: center;
     width: @floating-view-width;
@@ -82,7 +86,8 @@ a {
     color: @text-color-dark; 
     display:table-cell;
     vertical-align:middle;
-    & mobile {
+    &.mobile {
+      font-size: @portfolio-title-size-mobile;
       height: @portfolio-title-height-mobile;
     }
   }
@@ -104,6 +109,10 @@ a {
     color: @text-color-darkest;
     font-size: 60px;
     transition: opacity 0.3s;
+
+    &.mobile {
+      height: @floating-view-height-mobile;
+    }
 
     &:hover {
       opacity: 1;
@@ -147,7 +156,9 @@ a {
 }
 
 .modal {
+  -webkit-overflow-scrolling: auto;
   color: @text-color-darkest;
+
 
   &-content {
     padding: @wrapper-padding;
@@ -167,6 +178,10 @@ a {
   h1 {
     font-size: @font-size-large;
   }
+
+  p {
+    padding-bottom: @wrapper-padding*1.5;
+  }
   a {
     color: @text-color-dark;
     &:hover {
@@ -178,7 +193,10 @@ a {
 
 // Overwriting bootstrap classes
 .btn-primary {
-  font-size:@font-size-medium;
+    font-size:@font-size-medium;
+  &.mobile {
+    font-size:@font-size-large;
+  }
   color: @text-color-darker;
   &:hover {
     color: @text-color-dark;
@@ -194,3 +212,4 @@ a {
 .thumbnail {
   border: none;
 }
+
