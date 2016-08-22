@@ -63,7 +63,7 @@ module.exports = {
   },
   output: {
     filename: 'js/index_bundle.js',
-    path: __dirname + '/public'
+    path: __dirname + '/jolilj.github.io'
   },
   plugins: [
     new webpack.ProvidePlugin({
