@@ -6,33 +6,11 @@ const SMALL_SCREEN_WIDTH = 768;
  *  Component holding the navigation bar
  */
 const NavBar = React.createClass({
-  updateWindowDim: function() {
-    let w = window,
-        d = document,
-        documentElement = d.documentElement,
-        body = d.getElementsByTagName('body')[0],
-        width = w.innerWidth || documentElement.clientWidth || body.clientWidth,
-        height = w.innerHeight|| documentElement.clientHeight|| body.clientHeight;
-
-    this.setState({width: width, height: height});
-  },
-
-  componentWillMount: function() {
-    this.updateWindowDim();
-  },
-
-  componentDidMount: function() {
-    window.addEventListener("resize", this.updateWindowDim);
-  },
-
-  componentWillUnmount: function() {
-    window.removeEventListener("resize", this.updateWindowDim);
-  },
 
   render: function() {
     let className="nav-bar",
         itemClassName="nav-bar-item";
-    if(this.state.width <= 768) {
+    if(this.props.width <= 1140 || this.props.isMobile) {
       className = "nav-bar-mobile";
       itemClassName = "nav-bar-item-mobile";
     }

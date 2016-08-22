@@ -8,12 +8,14 @@ const title = 'JOAKIM LILJA',
           </div>),
       footer = (
           <div className="about-footer">
+            <p>
             <a href="mailto:lilja.joakim@gmail.com">&nbsp;&nbsp;&nbsp;&nbsp;
             <i className="fa fa-envelope fa-lg" aria-hidden="true"/> &nbsp;lilja.joakim@gmail.com</a>
             <a href="tel:+46737543450">&nbsp;&nbsp;&nbsp;&nbsp;
             <i className="fa fa-mobile fa-lg" aria-hidden="true"/> &nbsp;+46 737 54 34 50</a>
             <a href="http://www.github.com/jolilj" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;
             <i className="fa fa-github-square fa-lg" aria-hidden="true"/> &nbsp;jolilj</a>
+            </p>
           </div>
           );
 

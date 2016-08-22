@@ -14,14 +14,15 @@ const ItemView = React.createClass({
 
   render: function() {
     // Determine bootstrap grid class
-    let colSpan = this.props.colSpan ? this.props.colSpan : 4,
+    let colSpan = this.props.colSpan ? this.props.colSpan : 2,
         colOffset = this.props.colOffset ? this.props.colOffset : 0,
-        className='col-md-' + colSpan + ' col-md-offset-' + colOffset;
+        colType = this.props.colType ? this.props.colType : "md",
+        className='col-' + colType +'-' + colSpan + ' col-' + colType + '-offset-' + colOffset;
 
     // Get item content
     let itemIm = items[this.props.type].im,
         title = items[this.props.type].title,
-        titleClass = items[this.props.type].titleClass;
+        titleClass = "portfolio-view-title" + (this.props.isMobile ? " mobile" : "");
 
     return(
       <div className={className} >
@@ -32,7 +33,7 @@ const ItemView = React.createClass({
               <span className="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"/>
             </div>
           </div>
-          <div className={"portfolio-view-title " + titleClass}>
+          <div className={titleClass}>
             <p>{title}</p>
           </div>
         </div>

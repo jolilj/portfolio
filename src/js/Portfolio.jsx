@@ -4,12 +4,8 @@ const React = require('react'),
       ItemView = require('./ItemView.jsx'),
       ModalView = require('./ModalView.jsx');
 
-const ITEMS = require('./PortfolioItems.jsx').ids;
-
-let colNum = 2,
-    colSpan = 4,
-    colOffset = (12-colSpan*colNum)/2,
-    modalId = "modal";
+const ITEMS = require('./PortfolioItems.jsx').ids,
+      modalId = "modal";
 
 const Portfolio = React.createClass({
   getInitialState: function() {
@@ -31,6 +27,15 @@ const Portfolio = React.createClass({
   },
 
   render: function() {
+    let md = this.props.width > 992,
+        sm = this.props.width > 750 && this.props.width <= 992,
+        xs = this.props.width > 700 && this.props.width <= 750;
+
+    let colNum = 2,
+        colSpan = md ? 4 : (sm ? 5 : (xs ?  6 : 5)),
+        colOffset = (12-colSpan*colNum)/2,
+        colType = md ? "md" : ( sm ?  "sm" :  (xs ? "xs" : "sm"));
+
     return(
       <div id="portfolio" className='container-fluid text-center content-wrapper portfolio'>
         <ModalView type={this.state.itemType} id={modalId} />
@@ -39,24 +44,32 @@ const Portfolio = React.createClass({
             type={ITEMS.MAD_FILTER}
             onClick={this.showModal}
             colSpan={colSpan}
-            colOffset={colOffset} 
-            floating={'right'}/>
+            colOffset={colOffset}
+            colType={colType}
+            floating={'right'}
+            isMobile={this.props.isMobile}/>
           <ItemView
             type={ITEMS.CNN}
             onClick={this.showModal}
             colSpan={colSpan}
-            floating={'left'} />
+            colType={colType}
+            floating={'left'}
+            isMobile={this.props.isMobile}/>
         </div>
         <div className='row centered'>
           <ItemView
             type={ITEMS.PORTFOLIO}
             onClick={this.showModal}
             colSpan={colSpan}
-            colOffset={colOffset}/>
+            colOffset={colOffset}
+            colType={colType}
+            isMobile={this.props.isMobile}/>
           <ItemView
             type={ITEMS.OTHER}
             onClick={this.showModal}
-            colSpan={colSpan} />
+            colSpan={colSpan}
+            colType={colType}
+            isMobile={this.props.isMobile}/>
         </div>
       </div>
     );

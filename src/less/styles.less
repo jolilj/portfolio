@@ -4,6 +4,17 @@
 //Custom
 @import "custom_variables";
 
+.main-container {
+  font-size: @font-size-base;
+  &-mobile {
+    font-size: @font-size-mobile;
+    a {
+      font-size: @font-size-mobile;
+    }
+
+  }
+}
+
 p {
   font-weight: @font-weight-default;
 }
@@ -71,6 +82,9 @@ a {
     color: @text-color-dark; 
     display:table-cell;
     vertical-align:middle;
+    & mobile {
+      height: @portfolio-title-height-mobile;
+    }
   }
 
   &-image {
@@ -106,16 +120,14 @@ a {
 
   &-text {
     text-align: justify;
-    width: 100%;
     column-count: 2;
+    column-gap: @wrapper-padding;
     clear: both;
   }
 
   &-footer {
-    &:extend(.about-text);
     padding-top: @wrapper-padding;
     text-align: center;
-    column-count: 1;
   }
 
   &-image {
