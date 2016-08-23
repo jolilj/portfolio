@@ -7,7 +7,8 @@ const React = require('react'),
       ReactDOM = require('react-dom'),
       NavBar = require('./NavBar.jsx'),
       Portfolio = require('./Portfolio.jsx'),
-      About = require('./About.jsx');
+      About = require('./About.jsx'),
+      Cv = require('./Cv.jsx');
 
 window.mobilecheck = function() {
     var check = false;
@@ -44,8 +45,9 @@ const Site = React.createClass({
     return(
     <div className={className}>
       <NavBar width={this.state.width} isMobile={isMobile}/>
-      <Portfolio width={this.state.width} isMobile={isMobile}/>
       <About width={this.state.width}/>
+      <Portfolio width={this.state.width} isMobile={isMobile}/>
+      <Cv width={this.state.width} />
     </div>);
   },
 });

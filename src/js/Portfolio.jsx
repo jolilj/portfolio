@@ -39,6 +39,7 @@ const Portfolio = React.createClass({
     return(
       <div id="portfolio" className='container-fluid text-center content-wrapper portfolio'>
         <ModalView type={this.state.itemType} id={modalId} />
+        <p className="portfolio-title">PORTFOLIO</p>
         <div className='row centered'>
           <ItemView 
             type={ITEMS.MAD_FILTER}

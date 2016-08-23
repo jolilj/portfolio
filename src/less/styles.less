@@ -29,19 +29,28 @@ a {
 
 }
 
+
 .content-wrapper {
   padding: @wrapper-padding;
 
   &.portfolio {
-    background-color: @wrapper-bgcolor-light-blue;
+    background-color: @wrapper-bgcolor-base;
     //background: url('../img/portfolio_bg.svg');
   }
 
   &.about {
-    background-color: @wrapper-bgcolor-pink;
+    background-color: @wrapper-bgcolor-comp1;
     //background: url('../img/about_bg.svg');
   }
 
+  &.cv {
+    background-color: @wrapper-bgcolor-comp3;
+  }
+
+}
+
+.top-mobile {
+  padding-top: @wrapper-padding-top-mobile;
 }
 
 .nav-bar {
@@ -50,13 +59,24 @@ a {
   left: @wrapper-padding;
 
   &-mobile {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    z-index: 10000;
     text-align: center;
-    background-color: @wrapper-bgcolor-light-blue;
-    position: relative;
     padding: @wrapper-padding;
+    box-shadow: 3px 3px 10px @floating-view-shadow-color;
   }
   &-item-mobile {
     display: inline-block;
+  }
+}
+
+.portfolio {
+  &-title {
+    font-weight: @font-weight-default;
+    font-size: @font-size-very-large;
+    color: @text-color-dark;
   }
 }
 
@@ -155,9 +175,30 @@ a {
   }
 }
 
+.cv {
+  color: @text-color-dark;
+
+  &-title {
+    font-weight: @font-weight-default;
+    font-size: @font-size-very-large;
+  }
+
+  &-entry-title {
+    font-size: @font-size-medium;
+    font-weight: @font-weight-default;
+  }
+
+  &-view {
+    margin-bottom: @wrapper-padding;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px @floating-view-shadow-color;
+  }
+}
+
 .modal {
   -webkit-overflow-scrolling: auto;
   color: @text-color-darkest;
+  z-index:100001;
 
 
   &-content {
@@ -212,4 +253,23 @@ a {
 .thumbnail {
   border: none;
 }
+
+.table {
+  width: 100%;
+  text-align: left;
+
+  &-entry {
+    width: 60%;
+    font-size: @font-size-normal;
+    &-info {
+      font-size: @font-size-base;
+    }
+  }
+
+  & > tbody > tr > td {
+    padding:@wrapper-padding;
+    border-top: none;
+  }
+}
+
 

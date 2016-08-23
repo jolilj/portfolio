@@ -21,10 +21,13 @@ const NavBar = React.createClass({
     return(
       <div className={className}>
         <div className={itemClassName}>
+          <a className={btnClassName} href="#about" role="button"><i className="fa fa-user" aria-hidden="true"></i> &nbsp;ABOUT</a>
+        </div>
+        <div className={itemClassName}>
           <a className={btnClassName} href="#portfolio" role="button"><i className="fa fa-folder-open" aria-hidden="true"></i> &nbsp;PORTFOLIO</a>
         </div>
         <div className={itemClassName}>
-          <a className={btnClassName} href="#about" role="button"><i className="fa fa-user" aria-hidden="true"></i> &nbsp;ABOUT</a>
+          <a className={btnClassName} href="#cv" role="button"><i className="fa fa-file-text-o" aria-hidden="true"></i> &nbsp;CV</a>
         </div>
       </div>
     );
