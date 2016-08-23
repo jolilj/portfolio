@@ -4,7 +4,7 @@ const React = require('react');
 const title = 'JOAKIM LILJA',
       text = (
           <div className="about-text">
-            <p>Joakim Lilja is a creative problem solver based in Stockholm, Sweden. He is currently studying <a href="https://www.kth.se/en/studies/master/systems-control-robotics/">Systems, Control and Robotics</a> as part of the program <a href="https://www.kth.se/student/kurser/program/CTFYS/HT12/mal?l=en">Engineering Physics at Royal Institute of Technology</a>. Loves friends and family gatherings and <b>Sci</b>-fi and when not delving into control theory or building lego he wouldn’t mind a game of Catan. He lives with his partner and two kids in Skarpnäck, south of Stockholm.</p>
+            <p>Joakim Lilja is an engineering student/web developer based in Stockholm, Sweden. He is currently studying <a href="https://www.kth.se/en/studies/master/systems-control-robotics/">Systems, Control and Robotics</a> as part of the program <a href="https://www.kth.se/student/kurser/program/CTFYS/HT12/mal?l=en">Engineering Physics at Royal Institute of Technology</a>. Loves friends and family gatherings, math and <b>Sci</b>-fi and when not delving into control theory or building lego he wouldn’t mind a game of Catan. He lives with his partner and two kids in Skarpnäck, south of Stockholm.</p>
           </div>),
       footer = (
           <div className="about-footer">
