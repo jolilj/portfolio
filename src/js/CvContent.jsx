@@ -11,9 +11,14 @@ module.exports = {
             <p className="cv-entry-title"><i className="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;&nbsp;EDUCATION</p>
             </td>
             <td className="table-entry">
+              <div>
                 <b> Engineering Physics </b><br/>
                 Aug 2010 - <br/>
                 Royal Institute of Technology, Stockholm
+              </div>
+              <div className="table-entry-info">
+                Parental leave during Jan 2010 - Jan 2011 and Jan 2012 - Jan 2013.
+              </div>
             </td>
           </tr>
           <tr>
