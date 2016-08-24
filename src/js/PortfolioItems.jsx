@@ -5,6 +5,7 @@ const faceDetectionIm = require('../img/face_detection.png'),
       portfolio = require('../img/portfolio_big.png'),
       hushbox = require('../img/hushbox.png'),
       hushboxSchem = require('../img/hushbox_schematic.png'),
+      mememIm = require('../img/memem.png'),
       furniture_group = require('../img/furniture_group.png'),
       lamp = require('../img/lamp.png'),
       bot = require('../img/bot.png');
@@ -21,7 +22,7 @@ module.exports = {
     title: 'Pitch Angle Estimation with Extended Kalman and Madgwick Filter',
     text: (
         <div className="modal-text">
-          <p>{"Having a two wheel platform being able to balance requires an accurate estimate of it’s pitch angle, w.r.t. the vertical axis. This project implements the Madgwick and extended Kalman filter algorithm as estimators for this problem using data from an Inertial Measurement Unit. The Madgwick filter uses a quaternion representation of the orientation and a gradient descent method to estimate the angle in a computationally efficient way. The extended Kalman filter exploit the assumption that the noise is gaussian and using Bayes filter to estimate the mean of the state. The performance of the filters are then analysed based on the parameter settings and a final comparison shows that both are almost equally accurate(both static RMS error < 0.2 deg) and where the Madgwick filter is 25% faster. This was a project for the course"} <a href="http://www.kth.se/student/kurser/kurs/EL2320?l=en" > EL2320 Applied Estimation at KTH</a></p>
+          <p>{"Having a two wheel platform being able to balance requires an accurate estimate of it’s pitch angle, w.r.t. the vertical axis. This project implements the Madgwick and extended Kalman filter algorithm as estimators for this problem using data from an Inertial Measurement Unit. The Madgwick filter uses a quaternion representation of the orientation and a gradient descent method to estimate the angle in a computationally efficient way. The extended Kalman filter exploit the assumption that the noise is gaussian and using Bayes filter to estimate the mean of the state. The performance of the filters are then analysed based on the parameter settings and a final comparison shows that both are almost equally accurate(both static RMS error < 0.2 deg) and where the Madgwick filter is 25% faster. This was a project for the course"} <a href="http://www.kth.se/student/kurser/kurs/EL2320?l=en" target="_blank"> EL2320 Applied Estimation at KTH</a></p>
       </div>),
     footer: (
       <div className="modal-footer">
@@ -38,7 +39,7 @@ module.exports = {
     text: (
         <div>
           <div className="modal-text">
-            <p>Portfolio site written in <a href="https://facebook.github.io/react/">ReactJS</a> (and <a href="https://nodejs.org/en/">NodeJS</a>). React is a javascript library for developing interactive UIs. It's making use of the XML-like <a href="https://facebook.github.io/jsx/" target="_blank">JSX syntax</a> for easy implementation of HTML tags within javascript. The styling is written in the CSS pre-processing language <a href="http://lesscss.org/">LESS</a>. The jsx source files are not browser supported and needs to be compiled and bundled before release. The same goes for the less files. A versatile tool for that purpose is <a href="https://webpack.github.io/">webpack</a> which compiles the less files into a standard css bundle and compiles and minifies the node modules into a browser ready javascript bundle and injects these into a predefined HTML template file. </p>
+            <p>Portfolio site written in <a href="https://facebook.github.io/react/" target="_blank">ReactJS</a> (and <a href="https://nodejs.org/en/" targe="_blank">NodeJS</a>). React is a javascript library for developing interactive UIs. It's making use of the XML-like <a href="https://facebook.github.io/jsx/" target="_blank">JSX syntax</a> for easy implementation of HTML tags within javascript. The styling is written in the CSS pre-processing language <a href="http://lesscss.org/" target="_blank">LESS</a>. The jsx source files are not browser supported and needs to be compiled and bundled before release. The same goes for the less files. A versatile tool for that purpose is <a href="https://webpack.github.io/" target="_blank">webpack</a> which compiles the less files into a standard css bundle and compiles and minifies the node modules into a browser ready javascript bundle and injects these into a predefined HTML template file. </p>
           </div>
           <div className="thumbnail">
             <img src={portfolio}/>
@@ -56,7 +57,7 @@ module.exports = {
     text: (
         <div>
         <div className="modal-text">
-          <p>A simple cascaded convolutional neural network for single face detection implemented in python using Keras. Due to the computationally heavy nature of deep networks a shallow initial net, 24Net, is implemented for fast discrimination of the sub-images generated by a sliding window together with an image pyramid. This allows for a small portion of the input data to be passed to the deeper 48Net for final detection. The architecture enables computationally efficient detections with an accuracy of 88%. This was a project for the course<a href="http://www.kth.se/student/kurser/kurs/DD2427?l=en"> DD2427 Image Based Recognition and Classification at KTH</a></p>
+          <p>A simple cascaded convolutional neural network for single face detection implemented in python using Keras. Due to the computationally heavy nature of deep networks a shallow initial net, 24Net, is implemented for fast discrimination of the sub-images generated by a sliding window together with an image pyramid. This allows for a small portion of the input data to be passed to the deeper 48Net for final detection. The architecture enables computationally efficient detections with an accuracy of 88%. This was a project for the course<a href="http://www.kth.se/student/kurser/kurs/DD2427?l=en" target="_blank"> DD2427 Image Based Recognition and Classification at KTH</a></p>
           </div>
           <div className="thumbnail">
             <img src={faceDetectionIm}/>
@@ -77,16 +78,27 @@ module.exports = {
         <div>
           <div className="modal-item">
             <div className="modal-item-image">
-            <div className="thumbnail">
-              <img src={hushbox}/>
-            </div>
-            <div className="thumbnail">
-              <img src={hushboxSchem}/>
-            </div>
+              <div className="thumbnail">
+                <img src={hushbox}/>
+              </div>
+              <div className="thumbnail">
+                <img src={hushboxSchem}/>
+              </div>
             </div>
             <div className="modal-item-section">
             <h3>Hushbox/2014</h3>
             <p>Built a sound isolated box for a projector in order to lower it's noise level in the room, a so called hushbox. Two 12V fans, controlled by an Arduino UNO, drives the air through the box to avoid over-heating.</p>
+            </div>
+          </div>
+          <div className="modal-item">
+            <div className="modal-item-image">
+              <div className="thumbnail">
+                <img src={mememIm}/>
+              </div>
+            </div>
+            <div className="modal-item-section">
+            <h3>MEM'EM/2013-2014</h3>
+            <p> Plan, develop and release, beside my studies, the game MEM’EM where the user competes against friends by memorizing sequences. Available at <a href="https://play.google.com/store/apps/details?id=com.memem" target="_blank">Google Play</a></p>
             </div>
           </div>
           <div className="modal-item">

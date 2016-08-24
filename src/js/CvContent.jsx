@@ -44,10 +44,10 @@ module.exports = {
               <div>
                 <b> Web Developer </b><br/>
                 Jun 2016 - Jul 2016<br/>
-                A3J Consulting
+                <a href="http://a3j.se/" target="_blank">A3J Consulting</a>
               </div>
               <div className="table-entry-info">
-                Summer job developing chat bots for Facebook Messenger and Kik, visualizing a conversation graph within a CMS-tool and implementing WIT.ai for natural language processing.
+                Summer job developing chat bots for <a href="https://www.messenger.com/" target="_blank">Facebook Messenger</a> and <a href="https://www.kik.com/" target="_blank">Kik</a>, visualizing a conversation graph within a CMS-tool and implementing <a href="https://wit.ai/" target="_blank">WIT.ai</a> for natural language processing.
                 </div>
             </td>
           </tr>
@@ -56,10 +56,22 @@ module.exports = {
               <div>
                 <b> Web Developer </b><br/>
                 Jun 2015 - Jul 2015<br/>
-                A3J Consulting
+                <a href="http://a3j.se/" target="_blank">A3J Consulting</a>
               </div>
               <div className="table-entry-info">
-                Summer job developing web view application for iOS utilising open-source frameworks such as ReactJS, D3JS, Cordova amongst other.
+                Summer job developing web view application for iOS utilising open-source frameworks such as <a href="https://facebook.github.io/react/" target="_blank">ReactJS</a>, <a href="https://d3js.org/" target="_blank">D3</a>, <a href="https://cordova.apache.org/" target="_blank">Cordova</a> amongst other.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td className="table-entry">
+              <div>
+                <b> App Developer </b><br/>
+                Jan 2013 - Feb 2014<br/>
+                Own project
+              </div>
+              <div className="table-entry-info">
+                Plan, develop and release, beside my studies, the game MEM’EM where the user competes against friends by memorizing sequences. Available at <a href="https://play.google.com/store/apps/details?id=com.memem">Google Play</a>
               </div>
             </td>
           </tr>
