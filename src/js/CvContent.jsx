@@ -42,9 +42,33 @@ module.exports = {
       <table className="table">
         <tbody>
           <tr>
-            <td rowSpan="3">
+            <td rowSpan="6">
             <p className="cv-entry-title"><i className="fa fa-briefcase" aria-hidden="true"></i>&nbsp;&nbsp;EXPERIENCE</p>
             </td>
+            <td className="table-entry">
+              <div>
+                <b>Master Thesis </b><br/>
+                Jan 2017 - <br/>
+                <a href="http://www.ohb-sweden.se" target="_blank">OHB Sweden</a>
+              </div>
+              <div className="table-entry-info">
+                Investigating combined attitude and orbital control using Model Predictive Control (MPC) for spacecrafts without reaction wheels (spinning wheels traditionally used in satellites to provide attitude control).
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td className="table-entry">
+              <div>
+                <b> Software Development </b><br/>
+                Nov 2016 - Feb 2017<br/>
+                <a href="https://www.kth.se/ees/omskolan/organisation/avdelningar/ac" target="_blank">Royal Institute of Technology</a>
+              </div>
+              <div className="table-entry-info">
+              Involved part time in developing a Model Predictive Control (MPC) Toolbox in <a href="http://julialang.org" target="_blank">Julia</a>. <a href="https://en.wikipedia.org/wiki/Model_predictive_control" target="_blank">MPC</a> is a model based optimal control strategy. Developed the frontend and backend for linear time-invariant systems in collaboration with one colleague.
+              </div>
+            </td>
+          </tr>
+          <tr>
             <td className="table-entry">
               <div>
                 <b> Web Developer </b><br/>
@@ -53,7 +77,7 @@ module.exports = {
               </div>
               <div className="table-entry-info">
                 Summer job developing chat bots for <a href="https://www.messenger.com/" target="_blank">Facebook Messenger</a> and <a href="https://www.kik.com/" target="_blank">Kik</a>, visualizing a conversation graph within a CMS-tool and implementing <a href="https://wit.ai/" target="_blank">WIT.ai</a> for natural language processing.
-                </div>
+              </div>
             </td>
           </tr>
           <tr>
@@ -65,6 +89,18 @@ module.exports = {
               </div>
               <div className="table-entry-info">
                 Summer job developing web view application for iOS utilising open-source frameworks such as <a href="https://facebook.github.io/react/" target="_blank">ReactJS</a>, <a href="https://d3js.org/" target="_blank">D3</a>, <a href="https://cordova.apache.org/" target="_blank">Cordova</a> amongst other.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td className="table-entry">
+              <div>
+                <b> Bachelor Thesis </b><br/>
+                Jan 2015 - June 2015<br/>
+                <a href="https://klevgrand.se" target="_blank">Klevgränd Produktion</a>
+              </div>
+             <div className="table-entry-info">
+             Developed a digital dynamic range compression algorithm on behalf of Klevgränd Produktion. The thesis focused on a thorough review, implementaton and comparison of known algorithms.
               </div>
             </td>
           </tr>
@@ -116,7 +152,7 @@ module.exports = {
                 <b> Programming Languages: Familiar with</b><br/>
               </div>
               <div className="table-entry-info">
-              C, C++, Objective-C
+              C, C++, Objective-C, Julia
                 </div>
             </td>
           </tr>
