@@ -13,7 +13,7 @@ module.exports = {
             <td className="table-entry">
               <div>
                 <b> Engineering Physics </b><br/>
-                Aug 2010 - <br/>
+                Aug 2010 - 2017<br/>
                 Royal Institute of Technology, Stockholm
               </div>
               <div className="table-entry-info">
@@ -24,7 +24,7 @@ module.exports = {
           <tr>
             <td className="table-entry">
                 <b> Systems, Control and Robotics</b><br/>
-                Aug 2015 - <br/>
+                Aug 2015 - 2017<br/>
                 Royal Institute of Technology, Stockholm
             </td>
           </tr>
@@ -52,7 +52,7 @@ module.exports = {
                 <a href="https://www.scania.com/group/en/autonomous-transport-solutions/" target="_blank">Scania Autonomous Transport Solutions</a>
               </div>
               <div className="table-entry-info">
-              Working with sensor fusion at the predevelopment department at Scania. Sensor fusion is the combination of sensor data to estimate the state of the vehicle and interpret it's surroundings. Examples are localization and object tracking. Main programming languages are Matlab and C++.
+              Working with sensor fusion at the predevelopment department at Scania. Sensor fusion is the combination of sensor data to estimate the state of the vehicle and interpret it's surroundings. Examples include localization and object tracking. Main programming languages are Matlab and C++.
               </div>
             </td>
           </tr>
