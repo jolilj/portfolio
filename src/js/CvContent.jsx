@@ -42,17 +42,29 @@ module.exports = {
       <table className="table">
         <tbody>
           <tr>
-            <td rowSpan="6">
+            <td rowSpan="7">
             <p className="cv-entry-title"><i className="fa fa-briefcase" aria-hidden="true"></i>&nbsp;&nbsp;EXPERIENCE</p>
             </td>
             <td className="table-entry">
               <div>
+                <b>Development Engineer - Fusion, Maps & Localization</b><br/>
+                Jun 2017 - <br/>
+                <a href="https://www.scania.com/group/en/autonomous-transport-solutions/" target="_blank">Scania Autonomous Transport Solutions</a>
+              </div>
+              <div className="table-entry-info">
+              Working with sensor fusion at the predevelopment department at Scania. Sensor fusion is the combination of sensor data to estimate the state of the vehicle and interpret it's surroundings. Examples are localization and object tracking. Main programming languages are Matlab and C++.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td className="table-entry">
+              <div>
                 <b>Master Thesis </b><br/>
-                Jan 2017 - <br/>
+                Jan 2017 - Jun 2017<br/>
                 <a href="http://www.ohb-sweden.se" target="_blank">OHB Sweden</a>
               </div>
               <div className="table-entry-info">
-                Investigating combined attitude and orbital control using Model Predictive Control (MPC) for spacecrafts without reaction wheels (spinning wheels traditionally used in satellites to provide attitude control).
+              Investigated a combined attitude and orbital control using Model Predictive Control (MPC) for spacecrafts without reaction wheels (spinning wheels traditionally used in satellites to provide attitude control). Thesis available <a href="http://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1130024&dswid=_new" target="_blank">here</a>.
               </div>
             </td>
           </tr>
