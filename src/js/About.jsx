@@ -3,7 +3,8 @@
 const React = require('react'),
       AboutContent = require('./AboutContent.jsx');
 
-const aboutIm = require('../img/about_image.png');
+const aboutIm2x = require('../img/about@2x.png');
+const aboutIm1x = require('../img/about@1x.png');
 
 const About = React.createClass({
   render: function() {
@@ -22,7 +23,7 @@ const About = React.createClass({
     return (
       <div id="about" className={divClass}>
         <div>
-          <img className='about-image' src={aboutIm}/>
+          <img className='about-image' srcSet={aboutIm1x + ' 1x, ' + aboutIm2x + ' 2x'}/>
         </div>
         <h1 className="about-title">{AboutContent.title}</h1>
         <div className="row-centered">
